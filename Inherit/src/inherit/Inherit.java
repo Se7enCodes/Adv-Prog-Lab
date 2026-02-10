@@ -11,7 +11,9 @@ package inherit;
  * @author student
  */
 public class Inherit {
-    int i, j;
+    private int i;
+    int j;  //no modifier, default
+    protected int k;
     Inherit(int m, int n)
     {
         i = m;
