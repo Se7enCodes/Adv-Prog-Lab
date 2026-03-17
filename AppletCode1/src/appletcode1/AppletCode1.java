@@ -38,5 +38,8 @@ public class AppletCode1 extends Applet {
         
         g.setColor(Color.darkGray);
         g.drawArc(50, 70, 50, 60, 60, 70);
+        
+        g.setColor(Color.darkGray);
+        g.drawArc(70,60,60,50,70,50);
     }
 }
