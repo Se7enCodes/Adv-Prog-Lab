@@ -1,0 +1,50 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class LargestNo {
+    public static void main(String[] args) {
+
+        JFrame frame = new JFrame("Largest Number");
+        frame.setSize(300, 300);
+        frame.setLayout(new GridLayout(5, 1, 10, 10));
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        JTextField t1 = new JTextField();
+        JTextField t2 = new JTextField();
+        JTextField t3 = new JTextField();
+
+        JLabel L1 = new JLabel("Enter 3 numbers:");
+        JLabel L2 = new JLabel("Result will appear here", SwingConstants.CENTER);
+
+        JButton maxBtn = new JButton("Find Max");
+
+        maxBtn.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    double a = Double.parseDouble(t1.getText());
+                    double b = Double.parseDouble(t2.getText());
+                    double c = Double.parseDouble(t3.getText());
+
+                    double max = a;
+
+                    if (b > max) max = b;
+                    if (c > max) max = c;
+
+                    L2.setText("The largest number is: " + max);
+                } catch (NumberFormatException ex) {
+                    L2.setText("Invalid input. Enter numbers only.");
+                }
+            }
+        });
+
+        frame.add(L1);
+        frame.add(t1);
+        frame.add(t2);
+        frame.add(t3);
+        frame.add(maxBtn);
+        frame.add(L2);
+
+        frame.setVisible(true);
+    }
+}
