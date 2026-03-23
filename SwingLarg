@@ -6,6 +6,7 @@ public class SwingLarg {
     public static void main(String[] args) {
 
         JFrame frame = new JFrame("Largest Number");
+
         frame.setSize(300, 300);
         frame.setLayout(new GridLayout(5, 1, 10, 10));
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
